@@ -3,6 +3,7 @@
     imports = [
         ./hyprland.nix
 
+        ./theme
         ./gtk-theme.nix
         ./wine.nix
         ./pro-audio.nix

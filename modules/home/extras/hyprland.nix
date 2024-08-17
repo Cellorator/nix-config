@@ -1,9 +1,8 @@
 let
-    hyprland = wayland.windowManager.hyprland
+    hyprland = wayland.windowManager.hyprland;
 in {
     hyprland.enable = true;
-    hyprland.settings = {
-        generarl
+    hyprland.settings.general = {
         "$mod" = "SUPER";
     };
 }
