@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
     imports = [
+        ./hyprland.nix
+
         ./gtk-theme.nix
         ./wine.nix
         ./pro-audio.nix
