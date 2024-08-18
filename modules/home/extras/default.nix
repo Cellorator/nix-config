@@ -9,6 +9,8 @@
         ./theme
         ./wine.nix
         ./pro-audio.nix
+
+        ./gaming
     ];
 
     home.packages = with pkgs; [
