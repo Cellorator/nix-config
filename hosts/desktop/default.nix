@@ -10,6 +10,7 @@
         ./hardware-configuration.nix
         ../../modules/nixos/core
         ../../modules/nixos/extras
+        ../../modules/common/theme/system.nix
         ../../users/primary/nixos.nix
     ];
 

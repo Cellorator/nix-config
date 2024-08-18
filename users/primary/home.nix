@@ -4,7 +4,7 @@
     imports = [
         ../../modules/home/core
         ../../modules/home/extras
-        ../../modules/common/theme/global.nix
+        ../../modules/common/theme/user.nix
     ];
 
     nix = {
