@@ -13,9 +13,16 @@ in
 {
     services.displayManager.sddm = {
         enable = true;
-        extraPackages = [
-            pkgs.where-is-my-sddm-theme
-        ];
-        theme = "where_is_my_sddm_theme";
+        package = pkgs.libsForQt5.sddm;
+        theme = "where_is_my_sddm_theme_qt5";
     };
+
+    environment.systemPackages = with pkgs; [
+        catppuccin-sddm
+        (where-is-my-sddm-theme.override {
+            variants = [ "qt5" ];
+            inherit themeConfig;
+        })
+        htop
+    ];
 }
