@@ -18,5 +18,6 @@
 
         firefox
         fastfetch
+        lxappearance
     ];
 }
