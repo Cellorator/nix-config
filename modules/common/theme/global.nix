@@ -1,5 +1,7 @@
-{ utils, pkgs, ... }:
+{ stylix, pkgs, ... }:
 {
+    imports = [ stylix.homeManagerModules.stylix ];
+
     stylix = {
         enable = true;
         image = /home/admin/Pictures/backgrounds/blue-black-hole_3840x2160.png;
@@ -24,15 +26,5 @@
         package = pkgs.simp1e-cursors;
         name = "Simp1e";
         size = 16;
-    };
-
-    home.file = utils.linkToHome (utils.prepend ".local/share/" [
-        "themes/KanagawaDragon"
-        "icons/KanagawaDragon"
-    ]);
-
-    gtk = {
-        enable = true;
-        iconTheme.name = "KanagawaDragon";
     };
 }

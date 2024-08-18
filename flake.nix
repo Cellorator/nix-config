@@ -14,7 +14,7 @@
         wezterm.url = "github:wez/wezterm?dir=nix";
     };
 
-    outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
+    outputs = { nixpkgs, home-manager, ... }@inputs:
     let
         system = "x86_64-linux";
         pkgs = import nixpkgs {
@@ -35,7 +35,7 @@
                 inherit pkgs;
                 extraSpecialArgs = inputs // { username = "admin"; };
                 modules = [
-                    ./users/primary/home.nix stylix.homeManagerModules.stylix
+                    ./users/primary/home.nix
                 ];
             };
         };
