@@ -6,7 +6,6 @@
         ./kitty.nix
         ./wezterm.nix
 
-        ./theme
         ./wine.nix
         ./pro-audio.nix
 

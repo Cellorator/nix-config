@@ -1,9 +1,10 @@
-{ pkgs, config, username, utils, ... }:
+{ pkgs, username, utils, ... }:
 
 {
     imports = [
         ../../modules/home/core
         ../../modules/home/extras
+        ../../modules/common/theme/global.nix
     ];
 
     nix = {
