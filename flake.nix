@@ -10,9 +10,11 @@
         };
 
         stylix.url = "github:danth/stylix";
+
+        wezterm.url = "github:wez/wezterm";
     };
 
-    outputs = { nixpkgs, home-manager, ... }@inputs:
+    outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
     let
         system = "x86_64-linux";
         pkgs = import nixpkgs {
@@ -32,7 +34,9 @@
             admin = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 extraSpecialArgs = inputs // { username = "admin"; };
-                modules = [ ./users/primary/home.nix ];
+                modules = [
+                    ./users/primary/home.nix stylix.homeManagerModules.stylix
+                ];
             };
         };
     };

@@ -5,7 +5,6 @@ in {
     _module.args = { inherit utils; };
 
     home.packages = with pkgs; [
-        wezterm
         fish
         starship
         pfetch
@@ -22,7 +21,6 @@ in {
     ];
 
     home.file = utils.linkToHome (utils.prepend ".config/" [
-        "wezterm"
         "fish"
         "nvim"
 

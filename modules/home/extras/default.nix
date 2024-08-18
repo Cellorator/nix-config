@@ -3,8 +3,10 @@
     imports = [
         ./hyprland.nix
 
+        ./kitty.nix
+        ./wezterm.nix
+
         ./theme
-        ./gtk-theme.nix
         ./wine.nix
         ./pro-audio.nix
     ];
@@ -15,5 +17,6 @@
         gnumake
 
         firefox
+        fastfetch
     ];
 }
