@@ -4,24 +4,17 @@ let
 in {
     _module.args = { inherit utils; };
 
-    home.packages = with pkgs; [
-        fish
-        starship
-        pfetch
-        bat
-        zoxide
-        eza
-        fzf
-        neovim
-        xclip
+    imports = [
+        ./cli
+    ];
 
+    home.packages = with pkgs; [
         rofi
         alttab
         picom
     ];
 
     home.file = utils.linkToHome (utils.prepend ".config/" [
-        "fish"
         "nvim"
 
         "awesome"
