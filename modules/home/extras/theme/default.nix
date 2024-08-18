@@ -20,6 +20,11 @@
         sizes.terminal = 12;
     };
 
+    stylix.cursor = {
+        package = pkgs.simp1e-cursors;
+        name = "Simp1e-Nord-Light";
+    };
+
     home.file = utils.linkToHome (utils.prepend ".local/share/" [
         "themes/KanagawaDragon"
         "icons/KanagawaDragon"
