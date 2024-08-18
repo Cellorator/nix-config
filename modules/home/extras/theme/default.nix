@@ -22,7 +22,8 @@
 
     stylix.cursor = {
         package = pkgs.simp1e-cursors;
-        name = "Simp1e-Nord-Light";
+        name = "Simp1e";
+        size = 16;
     };
 
     home.file = utils.linkToHome (utils.prepend ".local/share/" [
