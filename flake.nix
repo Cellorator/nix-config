@@ -11,7 +11,7 @@
 
         stylix.url = "github:danth/stylix";
 
-        wezterm.url = "github:wez/wezterm";
+        wezterm.url = "github:wez/wezterm?dir=nix";
     };
 
     outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
