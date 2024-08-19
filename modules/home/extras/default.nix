@@ -10,11 +10,11 @@
         ./pro-audio.nix
 
         ./gaming
+        ./dev
     ];
 
     home.packages = with pkgs; [
         clang
-        rustup
         gnumake
 
         firefox
