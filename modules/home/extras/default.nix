@@ -7,18 +7,19 @@
         ./kitty.nix
         ./wezterm.nix
 
-        ./wine.nix
-        ./pro-audio.nix
-
         ./gaming
         ./dev
+
+        ./firefox.nix
+
+        ./wine.nix
+        ./pro-audio.nix
     ];
 
     home.packages = with pkgs; [
         clang
         gnumake
 
-        firefox
         fastfetch
         lxappearance
     ];
