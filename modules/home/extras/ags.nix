@@ -1,9 +1,12 @@
-{ ags, username, ... }:
+{ ags, username, utils, ... }:
 {
     imports = [ ags.homeManagerModules.default ];
 
     programs.ags = {
         enable = true;
-        configDir = "/home/${username}/dotfiles/.config/ags";
     };
+
+    home.file = utils.linkToHome [
+        ".config/ags"
+    ];
 }
