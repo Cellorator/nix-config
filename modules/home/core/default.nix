@@ -9,7 +9,7 @@ in {
     ];
 
     home.packages = with pkgs; [
-        rofi
+        rofi-wayland
         alttab
         picom
     ];
