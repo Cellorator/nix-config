@@ -65,4 +65,8 @@
     wayland.windowManager.hyprland.settings.decoration = {
         inactive_opacity = 0.9;
     };
+
+    wayland.windowManager.hyprland.settings.input = {
+        sensitivity = -0.5;
+    };
 }
