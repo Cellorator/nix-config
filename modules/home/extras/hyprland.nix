@@ -19,8 +19,6 @@
 
             "$mod, J, cyclenext"
             "$mod, K, cyclenext, prev"
-            "$mod, H, resizeactive, -96 0"
-            "$mod, L, resizeactive, 96 0"
 
             "$mod SHIFT, J, swapnext"
             "$mod SHIFT, K, swapnext, prev"
@@ -46,6 +44,10 @@
             ]) 10)
         );
 
+        binde = [
+            "$mod, H, resizeactive, -96 0"
+            "$mod, L, resizeactive, 96 0"
+        ];
         bindm = [
             "$mod, mouse:272, movewindow"
             "$mod, mouse:273, resizewindow"
