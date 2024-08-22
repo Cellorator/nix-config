@@ -7,12 +7,13 @@
     wayland.windowManager.hyprland.settings = {
         exec-once = [
             "ags"
+            "nm-applet"
+            "blueman-applet"
         ];
 
         "$mod" = "SUPER";
 
         bind = [
-
             "$mod, R, exec, rofi -show drun"
             "$mod, RETURN, exec, kitty"
             "$mod, B, exec, firefox"
