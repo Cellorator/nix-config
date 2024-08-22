@@ -6,7 +6,7 @@
 
     wayland.windowManager.hyprland.settings = {
         exec-once = [
-            "waybar"
+            "ags"
         ];
 
         "$mod" = "SUPER";
@@ -25,6 +25,8 @@
 
             "$mod, W, killactive"
             "$mod, F, togglefloating"
+            "$mod, M, fullscreen, 1"
+            "$mod SHIFT, M, fullscreen, 0"
 
             "$mod SHIFT, Q, exit"
         ]
@@ -58,6 +60,7 @@
             "XDG_SESSION_TYPE,wayland"
             "GBM_BACKEND,nvidia-drm"
             "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+            "MOZ_ENABLE_WAYLAND,0"
         ];
     };
 

@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+
+with lib;
 {
     home.packages = with pkgs; [
         lutris
@@ -10,7 +12,10 @@
     };
 
     programs.mangohud.settings = {
+        no_display = true;
+
         fps_limit = "75, 0";
+        af = 16;
 
         gpu_temp = true;
         gpu_core_clock = true;
@@ -38,7 +43,12 @@
         exec_name = true;
 
         frame_timing = true;
-        histogram = true;
+
+        font_size = mkForce 20;
+        font_size_text = mkForce 18;
+        font_scale = mkForce 1;
+        text_outline = false;
+        background_alpha = mkForce 0.5;
     };
 }
 
