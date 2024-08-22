@@ -22,5 +22,7 @@
 
         fastfetch
         lxappearance
+
+        snixembed
     ];
 }
