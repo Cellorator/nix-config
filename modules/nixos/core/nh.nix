@@ -1,6 +1,8 @@
 {
     programs.nh = {
         enable = true;
-        flake = /home/admin/nix-config;
+        clean.enable = true;
+        clean.extraArgs = "--keep-since 30d";
+        flake = "/home/admin/nix-config";
     };
 }
