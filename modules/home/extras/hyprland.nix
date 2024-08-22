@@ -35,16 +35,14 @@
         # workspaces
         # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
         builtins.concatLists (builtins.genList (
-            x: let
-                ws = let
-                    c = (x + 1) / 10;
-                in
-                builtins.toString (x + 1 - (c * 10));
+            x:
+            let
+                id = toString (x + 1);
             in
             [
-                "$mod, ${ws}, workspace, ${toString (x + 1)}"
-                "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-            ]) 10)
+                "$mod, ${id}, workspace, ${id}"
+                "$mod SHIFT, ${id}, movetoworkspace, ${id}"
+            ]) 9)
         );
 
         binde = [
@@ -65,10 +63,10 @@
         ];
     };
 
-    wayland.windowManager.hyprland.settings.general = {
+    wayland.windowManager.hyprland.settings.general = rec {
 
-        gaps_in = 4;
-        gaps_out = 8;
+        gaps_in = 3;
+        gaps_out = gaps_in * 2;
 
         layout = "master";
     };
