@@ -6,6 +6,5 @@
         open = true;
         modesetting.enable = true;
         powerManagement.enable = true;
-        forceFullCompositionPipeline = true;
     };
 }

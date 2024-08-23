@@ -1,8 +1,9 @@
-{ pkgs, ... }:
 {
-    home.packages = [ pkgs.waybar ];
-
     wayland.windowManager.hyprland.enable = true;
+
+    wayland.windowManager.hyprland.settings.render = {
+        explicit_sync = false;
+    };
 
     wayland.windowManager.hyprland.settings = {
         exec-once = [
@@ -59,7 +60,6 @@
             "XDG_SESSION_TYPE,wayland"
             "GBM_BACKEND,nvidia-drm"
             "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-            "MOZ_ENABLE_WAYLAND,0"
         ];
     };
 
