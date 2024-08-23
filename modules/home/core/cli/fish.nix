@@ -18,6 +18,9 @@
 
         vi = "nvim";
 
+        nho = "nh os switch";
+        nhh = "nh home switch";
+
         gi = "git init";
         gs = "git status";
         ga = "git add";

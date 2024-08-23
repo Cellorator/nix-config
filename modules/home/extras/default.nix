@@ -24,5 +24,6 @@
         lxappearance
 
         snixembed
+        libnotify
     ];
 }
