@@ -64,15 +64,15 @@
     };
 
     wayland.windowManager.hyprland.settings.general = rec {
-
-        gaps_in = 3;
+        border_size = 0;
+        gaps_in = 2;
         gaps_out = gaps_in * 2;
 
         layout = "master";
     };
 
     wayland.windowManager.hyprland.settings.decoration = {
-        inactive_opacity = 0.9;
+        inactive_opacity = 0.85;
     };
 
     wayland.windowManager.hyprland.settings.input = {
