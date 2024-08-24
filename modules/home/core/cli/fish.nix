@@ -21,6 +21,8 @@
         nho = "nh os switch";
         nhh = "nh home switch";
 
+        mk = "make";
+
         gi = "git init";
         gs = "git status";
         ga = "git add";
