@@ -5,5 +5,7 @@
         reaper
         yabridge
         yabridgectl
+
+        vital
     ];
 }
