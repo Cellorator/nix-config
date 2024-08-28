@@ -6,5 +6,6 @@
         ./ssh.nix
         ./thunar.nix
         ./steam.nix
+        ./virtualization.nix
     ];
 }
