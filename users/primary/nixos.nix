@@ -2,7 +2,7 @@
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.admin = {
         isNormalUser = true;
-        extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+        extraGroups = [ "networkmanager" "wheel" "libvirtd" "audio" ];
         description = "Admin";
         # let
         #     first = builtins.substring 0 1;

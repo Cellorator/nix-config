@@ -7,5 +7,6 @@
         ./thunar.nix
         ./steam.nix
         ./virtualization.nix
+        ./musnix.nix
     ];
 }

@@ -14,6 +14,8 @@
         wezterm.url = "github:wez/wezterm?dir=nix";  # Upstream wezterm
 
         ags.url = "github:Aylur/ags";
+
+        musnix.url = "github:musnix/musnix";
     };
 
     outputs = { nixpkgs, home-manager, ... }@inputs:
