@@ -3,6 +3,7 @@
 
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
+        nixpkgs-stable.url = "nixpkgs/nixos-24.05";
 
         home-manager = {
             url = "github:nix-community/home-manager";
@@ -18,14 +19,18 @@
         musnix.url = "github:musnix/musnix";
     };
 
-    outputs = { nixpkgs, home-manager, ... }@inputs:
+    outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
     let
         system = "x86_64-linux";
-        pkgs = import nixpkgs {
+
+        pkgs-attrs = {
             inherit system;
             config.allowUnfree = true;
         };
-    in {
+        pkgs = import nixpkgs pkgs-attrs;
+        pkgs-stable = import nixpkgs-stable pkgs-attrs;
+    in
+    {
         nixosConfigurations = {
            nixos-desktop = nixpkgs.lib.nixosSystem {
                 inherit system;
@@ -37,6 +42,7 @@
         homeConfigurations = {
             admin = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
+                inherit pkgs-stable;
                 extraSpecialArgs = inputs // { username = "admin"; };
                 modules = [
                     ./users/primary/home.nix
