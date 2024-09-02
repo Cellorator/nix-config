@@ -42,8 +42,10 @@
         homeConfigurations = {
             admin = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                inherit pkgs-stable;
-                extraSpecialArgs = inputs // { username = "admin"; };
+                extraSpecialArgs = inputs // {
+                    inherit pkgs-stable;
+                    username = "admin";
+                };
                 modules = [
                     ./users/primary/home.nix
                 ];

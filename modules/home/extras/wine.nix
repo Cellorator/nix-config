@@ -1,7 +1,6 @@
-{ pkgs, ... }:
+{ pkgs-stable, ... }:
 {
-    home.packages = with pkgs; [
-        wineWowPackages.staging
-        bottles
+    home.packages = [
+        pkgs-stable.wineWowPackages.staging
     ];
 }
