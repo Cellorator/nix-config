@@ -1,19 +1,12 @@
 { pkgs, ... }:
 {
     imports = [
-        ./hyprland.nix
-        ./ags.nix
-
-        ./kitty.nix
-        ./wezterm.nix
-
+        ./desktop
         ./gaming
         ./dev
 
-        ./firefox.nix
-
-        ./wine.nix
         ./pro-audio.nix
+        ./wine.nix
     ];
 
     home.packages = with pkgs; [
