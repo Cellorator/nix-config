@@ -4,6 +4,6 @@
         ./ags.nix
         ./kitty.nix
         ./wezterm.nix
-        ./firefox.nix
+        ./apps.nix
     ];
 }

@@ -9,7 +9,6 @@
         ./wine.nix
 
         ./syncthing.nix
-        ./obsidian.nix
     ];
 
     home.packages = with pkgs; [
