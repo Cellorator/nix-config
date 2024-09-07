@@ -1,11 +1,14 @@
 { pkgs, ... }:
 {
-    imports = [ ./fish.nix ];
+    imports = [
+        ./fish.nix
+        ./nvim.nix
+    ];
 
     home.packages = with pkgs; [
-        neovim
         pfetch
         xclip
+        wl-clipboard
     ];
 
     programs = {
