@@ -4,6 +4,7 @@ with lib;
 {
     home.packages = with pkgs; [
         lutris
+        prismlauncher
     ];
 
     programs.mangohud = {
