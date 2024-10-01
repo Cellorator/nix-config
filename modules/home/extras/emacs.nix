@@ -1,6 +1,7 @@
 { pkgs, utils, ... }:
 {
     home.packages = with pkgs; [
+        math-preview
         emacs
     ];
 
