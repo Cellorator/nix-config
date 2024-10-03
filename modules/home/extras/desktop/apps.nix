@@ -1,9 +1,11 @@
 { pkgs, ... }:
 {
-    home.packages = [
-        pkgs.obsidian
-        pkgs.libreoffice
-        pkgs.thunderbird
+    home.packages = with pkgs; [
+        libreoffice
+        thunderbird
+
+        obsidian
+        logseq
     ];
 
     programs = {
