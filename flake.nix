@@ -24,7 +24,18 @@
         pkgs-attrs = {
             inherit system;
             config.allowUnfree = true;
+            config.permittedInsecurePackages = [
+                "electron-27.3.11"
+            ];
+            overlays = [(
+                final: prev: {
+                    logseq = prev.logseq.override {
+                        electron = prev.electron_27;
+                    };
+                }
+            )];
         };
+
         pkgs = import nixpkgs pkgs-attrs;
         pkgs-stable = import nixpkgs-stable pkgs-attrs;
     in
