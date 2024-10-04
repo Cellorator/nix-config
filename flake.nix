@@ -12,8 +12,6 @@
 
         stylix.url = "github:danth/stylix";
 
-        wezterm.url = "github:wez/wezterm?dir=nix";  # Upstream wezterm
-
         ags.url = "github:Aylur/ags";
 
         musnix.url = "github:musnix/musnix";
