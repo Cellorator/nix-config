@@ -5,8 +5,6 @@
         ./gaming
         ./dev
 
-        ./emacs.nix
-
         ./pro-audio.nix
         ./wine.nix
 
