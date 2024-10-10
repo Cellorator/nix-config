@@ -1,8 +1,8 @@
 { pkgs, utils, ... }:
 {
     home.packages = with pkgs; [
-        math-preview
         emacs
+        sqlite
     ];
 
     home.file = utils.linkToHome [ ".config/emacs" ];
