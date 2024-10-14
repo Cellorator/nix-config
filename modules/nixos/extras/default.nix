@@ -8,5 +8,6 @@
         ./steam.nix
         ./virtualization.nix
         ./musnix.nix
+        ./printing.nix
     ];
 }

@@ -27,9 +27,6 @@
     # Select internationalisation properties.
     i18n.defaultLocale = "en_CA.UTF-8";
 
-    # Enable CUPS to print documents.
-    services.printing.enable = true;
-
     programs.nix-ld.enable = true;
 
     programs.bash = {
