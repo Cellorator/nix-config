@@ -4,7 +4,7 @@
         emacs
         sqlite
 
-        texliveMedium
+        texliveFull
     ];
 
     home.file = utils.linkToHome [ ".config/emacs" ];
