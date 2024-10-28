@@ -6,6 +6,8 @@
 
         obsidian
         logseq
+
+        zotero
     ];
 
     programs = {
