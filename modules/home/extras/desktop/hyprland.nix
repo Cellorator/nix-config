@@ -6,6 +6,7 @@
             "ags"
             "nm-applet"
             "blueman-applet"
+            "emacs --daemon"
         ];
 
         "$mod" = "SUPER";
@@ -13,6 +14,7 @@
         bind = [
             "$mod, R, exec, rofi -show drun"
             "$mod, RETURN, exec, kitty"
+            "$mod, E, exec, emacsclient -c"
             "$mod, B, exec, firefox"
 
             "$mod, J, cyclenext"
