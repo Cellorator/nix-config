@@ -77,6 +77,7 @@
 
     wayland.windowManager.hyprland.settings.input = {
         sensitivity = -0.5;
+        kb_options = "ctrl:nocaps"; # Change capslock to ctrl
     };
 
     # Fixes cursor stuttering
