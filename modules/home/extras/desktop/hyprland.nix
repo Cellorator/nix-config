@@ -1,10 +1,6 @@
 {
     wayland.windowManager.hyprland.enable = true;
 
-    wayland.windowManager.hyprland.settings.render = {
-        explicit_sync = false;
-    };
-
     wayland.windowManager.hyprland.settings = {
         exec-once = [
             "ags"
@@ -79,5 +75,9 @@
 
     wayland.windowManager.hyprland.settings.input = {
         sensitivity = -0.5;
+    };
+
+    wayland.windowManager.hyprland.settings.cursor = {
+        no_hardware_cursors = true;
     };
 }
