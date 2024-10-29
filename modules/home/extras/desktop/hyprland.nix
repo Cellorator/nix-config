@@ -29,8 +29,8 @@
             "$mod SHIFT, Q, exit"
         ]
         ++ (
-        # workspaces
-        # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
+        # Workspaces
+        # Binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
         builtins.concatLists (builtins.genList (
             x:
             let
@@ -77,6 +77,7 @@
         sensitivity = -0.5;
     };
 
+    # Fixes cursor stuttering
     wayland.windowManager.hyprland.settings.cursor = {
         no_hardware_cursors = true;
     };
