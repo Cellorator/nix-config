@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs-stable, pkgs, ... }:
 {
     home.packages = with pkgs; [
         ardour
@@ -8,6 +8,7 @@
 
         vital
         surge
-        distrho
+    ] ++ [
+        pkgs-stable.distrho
     ];
 }

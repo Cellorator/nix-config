@@ -5,7 +5,6 @@
         thunderbird
 
         obsidian
-        logseq
 
         zotero
     ];
