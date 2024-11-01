@@ -9,6 +9,8 @@
         pfetch
         xclip
         wl-clipboard
+        zip
+        unzip
     ];
 
     programs = {
