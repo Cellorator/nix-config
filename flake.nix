@@ -15,6 +15,8 @@
         ags.url = "github:Aylur/ags";
 
         musnix.url = "github:musnix/musnix";
+
+        nix-alien.url = "github:thiagokokada/nix-alien";
     };
 
     outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
