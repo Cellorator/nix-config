@@ -14,4 +14,8 @@
         enable = true;
         iconTheme.name = "KanagawaDragon";
     };
+
+    stylix.targets = {
+        hyprland.enable = false;
+    };
 }
