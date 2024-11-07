@@ -17,6 +17,8 @@
         musnix.url = "github:musnix/musnix";
 
         nix-alien.url = "github:thiagokokada/nix-alien";
+
+        nix-index.url = "github:nix-community/nix-index";
     };
 
     outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
@@ -26,16 +28,6 @@
         pkgs-attrs = {
             inherit system;
             config.allowUnfree = true;
-            config.permittedInsecurePackages = [
-                "electron-27.3.11"
-            ];
-            overlays = [(
-                final: prev: {
-                    logseq = prev.logseq.override {
-                        electron = prev.electron_27;
-                    };
-                }
-            )];
         };
 
         pkgs = import nixpkgs pkgs-attrs;

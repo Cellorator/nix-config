@@ -21,6 +21,8 @@
         };
     };
 
+    systemd.extraConfig = "DefaultLimitNOFILE=524288"
+
     # Set your time zone.
     time.timeZone = "America/Winnipeg";
 
