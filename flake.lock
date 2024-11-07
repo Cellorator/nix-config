@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "aangl": {
+    "aagl": {
       "inputs": {
         "flake-compat": "flake-compat",
         "nixpkgs": [
@@ -331,7 +331,7 @@
     },
     "root": {
       "inputs": {
-        "aangl": "aangl",
+        "aagl": "aagl",
         "ags": "ags",
         "home-manager": "home-manager",
         "musnix": "musnix",

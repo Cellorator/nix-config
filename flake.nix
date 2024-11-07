@@ -4,7 +4,6 @@
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
         nixpkgs-stable.url = "nixpkgs/nixos-24.05";
-
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +12,7 @@
         stylix.url = "github:danth/stylix";
         ags.url = "github:Aylur/ags";
         musnix.url = "github:musnix/musnix";
-        aangl = {
+        aagl = {
             url = "github:ezKEa/aagl-gtk-on-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
