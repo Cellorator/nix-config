@@ -6,6 +6,7 @@ in {
 
     imports = [
         ./cli
+        ./systemd.nix
     ];
 
     home.packages = with pkgs; [
