@@ -11,14 +11,12 @@
         };
 
         stylix.url = "github:danth/stylix";
-
         ags.url = "github:Aylur/ags";
-
         musnix.url = "github:musnix/musnix";
-
-        nix-alien.url = "github:thiagokokada/nix-alien";
-
-        nix-index.url = "github:nix-community/nix-index";
+        aangl = {
+            url = "github:ezKEa/aagl-gtk-on-nix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:

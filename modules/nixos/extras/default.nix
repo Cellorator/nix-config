@@ -1,13 +1,9 @@
 {
     imports = [
+        ./services
         ./graphics
-        ./bluetooth.nix
-        ./pipewire.nix
-        ./ssh.nix
+        ./gaming
         ./thunar.nix
-        ./steam.nix
-        ./virtualization.nix
         ./musnix.nix
-        ./printing.nix
     ];
 }
