@@ -21,7 +21,14 @@
         };
     };
 
-    systemd.extraConfig = "DefaultLimitNOFILE=524288";
+    security.pam.loginLimits = [
+        {
+            domain = "admin";
+            type = "hard";
+            item = "nofile";
+            value = "524288";
+        }
+    ];
 
     # Set your time zone.
     time.timeZone = "America/Winnipeg";
