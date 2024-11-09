@@ -2,7 +2,7 @@
 {
     home.packages = with pkgs; [
         emacs29-pgtk
-        texliveMedium
+        texliveFull
     ];
 
     home.file = utils.linkToHome [ ".config/emacs" ];
