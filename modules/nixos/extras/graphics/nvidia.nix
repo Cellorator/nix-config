@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
     boot.kernelParams = [ "nvidia.NVreg_UsePageAttributeTable=1" ];
     services.xserver.videoDrivers = [ "nvidia" ];
@@ -11,4 +12,8 @@
         powerManagement.enable = true;
         forceFullCompositionPipeline = true;
     };
+
+    environment.systemPackages = with pkgs; [
+        gwe
+    ];
 }
