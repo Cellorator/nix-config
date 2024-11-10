@@ -1,5 +1,9 @@
-{ pkgs, ... }:
 {
+    programs.tuxclocker = {
+        enable = true;
+        enabledNVIDIADevices = [ 0 1 ];
+    };
+
     boot.kernelParams = [ "nvidia.NVreg_UsePageAttributeTable=1" ];
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.graphics = {
@@ -12,8 +16,4 @@
         powerManagement.enable = true;
         forceFullCompositionPipeline = true;
     };
-
-    environment.systemPackages = with pkgs; [
-        gwe
-    ];
 }
