@@ -1,7 +1,7 @@
 { pkgs, utils, ... }:
 {
     home.packages = with pkgs; [
-        emacs29-pgtk
+        emacs
         texliveFull
     ];
 
