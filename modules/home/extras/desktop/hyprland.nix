@@ -63,7 +63,16 @@
             "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         ];
 
-        windowrulev2 = "noinitialfocus,xwayland:1";
+        windowrulev2 = [
+            "noinitialfocus,xwayland:1"
+            "minsize 250 250, class:^(Unity)$, title:^(Project Settings)$"
+            "minsize 250 250, class:^(Unity)$, title:^(Preferences)$"
+            "minsize 250 250, class:^(Unity)$, title:^(UnityEditor.AddComponent.AddComponentWindow)$"
+            "minsize 250 250, class:^(Unity)$, title:^(Package Manager)$"
+            "minsize 250 250, class:^(Unity)$, title:^(UI Toolkit Debugger)$"
+            "minsize 250 500, class:^(Unity)$, title:^(Font Asset Creator)$"
+            "minsize 500 250, class:^(Unity)$, title:^(Background Tasks)$"
+        ];
     };
 
     wayland.windowManager.hyprland.settings.general = rec {
