@@ -12,7 +12,7 @@ in
 
     stylix.fonts = {
         monospace = {
-            package = (pkgs.nerdfonts.override { fonts = [ "Hermit" ]; });
+            package = pkgs.nerd-fonts.hurmit;
             name = "Hurmit Nerd Font";
         };
 
