@@ -10,8 +10,7 @@ with lib;
         no_display = true;
 
         fps_limit = "75, 0";
-	show_fps_limit = true;
-        fps_limit_method = "early";
+	    show_fps_limit = true;
         af = 16;
 
         gpu_temp = true;
@@ -33,8 +32,8 @@ with lib;
         frametime = true;
         fps_metrics = "avg, 0.01, 0.001";
         fsr = true;
-	gamemode = true;
-	wine = true;
+	    gamemode = true;
+	    wine = true;
 
         throttling_status = true;
         throttling_status_graph = true;

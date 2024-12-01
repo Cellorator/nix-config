@@ -7,6 +7,8 @@
         unityhub
         godot_4
         vscode
+        vesktop
+        pixelorama
     ];
 
     programs = {

@@ -7,7 +7,7 @@
     ];
 
     home.packages = with pkgs; [
-        dotnetCorePackages.sdk_9_0
+        dotnet-sdk
     ];
     home.sessionVariables = {
         DOTNET_ROOT = "${pkgs.dotnet-sdk}";
