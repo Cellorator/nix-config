@@ -1,10 +1,9 @@
+{ hyprland, ... }:
 {
+    imports = [ hyprland.homeManagerModules.default ];
+
     wayland.windowManager.hyprland.enable = true;
-
     wayland.windowManager.hyprland.settings = {
-
-        render.explicit_sync = 0;
-
         exec-once = [
             "ags"
             "nm-applet"
