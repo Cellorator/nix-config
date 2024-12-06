@@ -12,8 +12,8 @@ in
 
     stylix.fonts = {
         monospace = {
-            package = pkgs.nerd-fonts.hurmit;
-            name = "Hurmit Nerd Font";
+            package = pkgs.nerd-fonts._0xproto;
+            name = "0xProto Nerd Font";
         };
 
         sansSerif = {
