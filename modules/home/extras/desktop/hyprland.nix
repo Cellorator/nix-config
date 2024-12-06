@@ -5,7 +5,7 @@
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.settings = {
         exec-once = [
-            "ags"
+            "ags run"
             "nm-applet"
             "blueman-applet"
             "emacs --daemon"

@@ -9,15 +9,16 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        stylix.url = "github:danth/stylix";
-        ags.url = "github:Aylur/ags";
-        musnix.url = "github:musnix/musnix";
-        aagl = {
-            url = "github:ezKEa/aagl-gtk-on-nix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
         hyprland.url = "github:hyprwm/Hyprland";
+
+        ags.url = "github:Aylur/ags";
+        astal.url = "github:aylur/astal";
+
+        stylix.url = "github:danth/stylix";
+
+        musnix.url = "github:musnix/musnix";
+
+        aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     };
 
     outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
