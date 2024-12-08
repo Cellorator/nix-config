@@ -11,8 +11,14 @@
 
         hyprland.url = "github:hyprwm/Hyprland";
 
-        ags.url = "github:Aylur/ags";
-        astal.url = "github:aylur/astal";
+        ags = {
+            url = "github:Aylur/ags";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        astal = {
+            url = "github:aylur/astal";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         stylix.url = "github:danth/stylix";
 
@@ -21,7 +27,7 @@
         aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     };
 
-    outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
+    outputs = { nixpkgs, nixpkgs-stable, home-manager, ags, astal, ... }@inputs:
     let
         system = "x86_64-linux";
 
@@ -47,6 +53,7 @@
                 inherit pkgs;
                 extraSpecialArgs = inputs // {
                     inherit pkgs-stable;
+                    inherit system;
                     username = "admin";
                 };
                 modules = [
@@ -54,5 +61,35 @@
                 ];
             };
         };
+        #
+        # # ags and astal packages
+        # packages.${system}. default = pkgs.stdenvNoCC.mkDerivation rec {
+        #     name = "my-shell";
+        #     src = ./.;
+        #
+        #     nativeBuildInputs = [
+        #         ags.packages.${system}.default
+        #         pkgs.wrapGAppsHook
+        #         pkgs.gobject-introspection
+        #     ];
+        #
+        #     buildInputs = with astal.packages.${system}; [
+        #         io
+        #         astal3
+        #         battery
+        #         bluetooth
+        #         hyprland
+        #         network
+        #         notifd
+        #         tray
+        #         wireplumber
+        #         # any other package
+        #     ];
+        #
+        #     installPhase = ''
+        #         mkdir -p $out/bin
+        #         ags bundle app.ts $out/bin/${name}
+        #     '';
+        # };
     };
 }
