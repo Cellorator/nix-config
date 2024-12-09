@@ -12,7 +12,7 @@ in
 
     stylix.fonts = {
         monospace = {
-            package = (pkgs.nerdfonts.override { fonts = [ "0xProto" ]; });
+            package = pkgs.nerd-fonts._0xproto;
             name = "0xProto Nerd Font";
         };
 
